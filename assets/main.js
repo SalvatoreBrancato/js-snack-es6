@@ -26,7 +26,7 @@ bici.forEach((element) => {
 
 //destructuring object
 let {nome, peso} = bici[1]  
-console.log(nome, peso)
+
 document.getElementById(`Mountain-bike`).innerHTML = `La Mountain bike più leggera è la ${nome} con il suo peso di ${peso}`
 
 
@@ -36,6 +36,46 @@ document.getElementById(`Mountain-bike`).innerHTML = `La Mountain bike più legg
 // Generare numeri random al posto degli 0 nelle proprietà:
 // Punti fatti e falli subiti.
 // Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+const squadre = [ 
+    {
+        nomeSquadra: 'Inter',
+        puntiFatti: 0,
+        falliSubiti: 0,
+    },{
+        nomeSquadra: 'Milan',
+        puntiFatti: 0,
+        falliSubiti: 0,   
+    },{
+        nomeSquadra: 'Juventus',
+        puntiFatti: 0,
+        falliSubiti: 0,
+    },
+];
+
+
+for (let i = 0; i < squadre.length; i++) {
+    squadre[i].puntiFatti = Math.floor((Math.random() * 100) + 1);
+    squadre[i].falliSubiti = Math.floor((Math.random() * 100) + 1);    
+}
+
+let destructuringSquadre = squadre[0]
+let {nomeSquadra, falliSubiti} = destructuringSquadre
+
+let nuovoArraySquadre = []
+
+squadre.forEach((element) => { 
+    nuovoArraySquadre.push(`squadra ${element.nomeSquadra}`, `falli subiti${element.falliSubiti}`)
+})
+    
+document.getElementById(`squadre`).innerHTML = `${nuovoArraySquadre}`
+
+console.log(nuovoArraySquadre)
+
+
+
+
+
+
 
 // Snack 3
 // Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
