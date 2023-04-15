@@ -71,16 +71,27 @@ document.getElementById(`squadre`).innerHTML = `${nuovoArraySquadre}`
 
 console.log(nuovoArraySquadre)
 
-
-
-
-
-
-
 // Snack 3
 // Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
 // l'array egnerato da parte vostra dovrà essere di ad esempio nomi o cose: ['alberto', 'michele','angelo','simone']
 // se come numeri ad esemio ho 2 e 4 devo inserire in un array nuovo l'elemento in posizione 3
 // La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.
 // Usiamo i nuovi metodi degli array foreach o filter.
+
+const arrayNomi = [
+    `Salvo`,
+    `Simone`,
+    `Tullio`,
+    `Leo`,
+    `Stefano`
+]
+
+console.log(arrayNomi)
+
+
+const numeroCasuale1 = Math.floor((Math.random() * 4) + 0)
+const numeroCasuale2 = Math.floor((Math.random() * 4) + 0)
+
+document.getElementById(`nome1`).innerHTML = `${arrayNomi[Math.floor((Math.random() * 4) + 0)]}`
+document.getElementById(`nome2`).innerHTML = `${arrayNomi[Math.floor((Math.random() * 4) + 0)]}`
 
